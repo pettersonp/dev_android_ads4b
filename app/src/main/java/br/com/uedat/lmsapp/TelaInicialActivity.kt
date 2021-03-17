@@ -39,7 +39,12 @@ class TelaInicialActivity : DebugActivity() {
         }else if (id == R.id.action_config){
             Toast.makeText(this, "clicou no config", Toast.LENGTH_LONG).show()
 
+        }else if(id == android.R.id.home){
+            finish()
         }
+
+
+
         return super.onOptionsItemSelected(item)
     }
 }

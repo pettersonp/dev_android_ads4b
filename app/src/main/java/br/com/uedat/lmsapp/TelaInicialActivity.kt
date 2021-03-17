@@ -24,26 +24,31 @@ class TelaInicialActivity : DebugActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_inicial)
 
-//zed.setImageResource(R.drawable.zed)
         var params = intent.extras
         var nome = params?.getString("nome")
         Toast.makeText(this, "nome do usuario: $nome", Toast.LENGTH_LONG).show()
-        //viewT.text = "$nome"
+
         supportActionBar?.title = "Musicas"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         butMusics.setOnClickListener {
-            //Toast.makeText(this,"Clicou no botão de login", Toast.LENGTH_SHORT).show()
+
             val intent = Intent(this, SegundaActivity::class.java)
+            var name = "Playlists"
+            intent.putExtra("name","$name")
             startActivity(intent)
         }
         butArtists.setOnClickListener {
-            //Toast.makeText(this,"Clicou no botão de login", Toast.LENGTH_SHORT).show()
+
             val intent = Intent(this, SegundaActivity::class.java)
+            var name = "Artistas"
+            intent.putExtra("name","$name")
             startActivity(intent)
         }
         butAbout.setOnClickListener {
-            //Toast.makeText(this,"Clicou no botão de login", Toast.LENGTH_SHORT).show()
+
             val intent = Intent(this, SegundaActivity::class.java)
+            var name = "Ajuda"
+            intent.putExtra("name","$name")
             startActivity(intent)
         }
 
@@ -61,6 +66,8 @@ class TelaInicialActivity : DebugActivity() {
         val id = item.itemId
         if (id == R.id.action_buscar){
             Toast.makeText(this, "clicou em buscar", Toast.LENGTH_LONG).show()
+
+
         }else if (id == R.id.action_atualizar){
             barra.visibility = View.VISIBLE
             Timer("SettingUp", false).schedule(10000) {

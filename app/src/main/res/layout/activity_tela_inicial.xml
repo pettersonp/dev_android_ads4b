@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/teste_color"
-            android:text="Musicas"
+            android:text="Playlists"
             android:textStyle="bold"
             tools:layout_editor_absoluteX="243dp"
             tools:layout_editor_absoluteY="145dp" />

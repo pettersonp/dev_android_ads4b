@@ -7,5 +7,10 @@ class SegundaActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_segunda)
+        var params = intent.extras
+        var nome = params?.getString("name")
+        getSupportActionBar()?.setTitle("$nome")
+
+
     }
 }

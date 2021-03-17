@@ -4,17 +4,23 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
+import android.view.ViewAnimationUtils
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.isVisible
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
 import kotlinx.android.synthetic.main.login.*
 import org.w3c.dom.Text
+import kotlin.concurrent.thread
+import kotlin.concurrent.timer
 
 class TelaInicialActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_tela_inicial)
+
 //zed.setImageResource(R.drawable.zed)
         var params = intent.extras
         var nome = params?.getString("nome")
@@ -34,10 +40,14 @@ class TelaInicialActivity : DebugActivity() {
         if (id == R.id.action_buscar){
             Toast.makeText(this, "clicou em buscar", Toast.LENGTH_LONG).show()
         }else if (id == R.id.action_atualizar){
-            Toast.makeText(this, "clicou em atualizar", Toast.LENGTH_LONG).show()
+            barra.visibility = View.VISIBLE
+
+
 
         }else if (id == R.id.action_config){
-            Toast.makeText(this, "clicou em configurações", Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "clicou em Sair", Toast.LENGTH_LONG).show()
+            finish()
+
 
         }else if(id == android.R.id.home){
             finish()

@@ -4,5 +4,5 @@
     <string name="senha">Senha</string>
     <string name="action_buscar">Buscar</string>
     <string name="action_atualizar" />
-    <string name="action_config">Configurações</string>
+    <string name="action_config">Sair</string>
 </resources>

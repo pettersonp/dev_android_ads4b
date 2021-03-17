@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#03A9F4">
+    android:background="#BB94C0">
 
     <TextView
         android:id="@+id/textView2"
@@ -46,8 +46,9 @@
     <Button
         android:id="@+id/botao_login"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="266dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/teste_color"
         android:text="Entrar" />
 
     <TextView
@@ -59,7 +60,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="315dp"
         app:srcCompat="@drawable/projeto" />
 
 </LinearLayout>

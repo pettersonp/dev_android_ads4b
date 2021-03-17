@@ -25,8 +25,9 @@ class MainActivity : DebugActivity() {
             val campo_senha = campo_senha.text.toString()
             var usu = "aluno"
             var sen = "impacta"
-            params.putString("nome", usu)
+            intent.putExtra("nome","$nome_usuario")
             if (nome_usuario == usu && campo_senha == sen) {
+
                 startActivity(intent)
 
             }else{

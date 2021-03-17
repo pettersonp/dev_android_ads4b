@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Projeto OPE</string>
+    <string name="login">Login</string>
+    <string name="senha">Senha</string>
+    <string name="action_buscar">Buscar</string>
+    <string name="action_atualizar" />
+    <string name="action_config">config</string>
+</resources>

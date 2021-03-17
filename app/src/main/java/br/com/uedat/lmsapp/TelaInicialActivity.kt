@@ -1,5 +1,6 @@
 package br.com.uedat.lmsapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -15,6 +16,8 @@ import kotlinx.android.synthetic.main.login.*
 import org.w3c.dom.Text
 import kotlin.concurrent.thread
 import kotlin.concurrent.timer
+import java.util.Timer
+import kotlin.concurrent.schedule
 
 class TelaInicialActivity : DebugActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +31,25 @@ class TelaInicialActivity : DebugActivity() {
         //viewT.text = "$nome"
         supportActionBar?.title = "Musicas"
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        butMusics.setOnClickListener {
+            //Toast.makeText(this,"Clicou no botão de login", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SegundaActivity::class.java)
+            startActivity(intent)
+        }
+        butArtists.setOnClickListener {
+            //Toast.makeText(this,"Clicou no botão de login", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SegundaActivity::class.java)
+            startActivity(intent)
+        }
+        butAbout.setOnClickListener {
+            //Toast.makeText(this,"Clicou no botão de login", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, SegundaActivity::class.java)
+            startActivity(intent)
+        }
+
+
+
+
 
 
     }
@@ -41,10 +63,14 @@ class TelaInicialActivity : DebugActivity() {
             Toast.makeText(this, "clicou em buscar", Toast.LENGTH_LONG).show()
         }else if (id == R.id.action_atualizar){
             barra.visibility = View.VISIBLE
+            Timer("SettingUp", false).schedule(10000) {
+                barra.visibility = View.INVISIBLE
+            }
 
 
 
-        }else if (id == R.id.action_config){
+
+        }else if (id == R.id.action_sair){
             Toast.makeText(this, "clicou em Sair", Toast.LENGTH_LONG).show()
             finish()
 

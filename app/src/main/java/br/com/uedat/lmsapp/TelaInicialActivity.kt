@@ -20,9 +20,8 @@ class TelaInicialActivity : DebugActivity() {
         var nome = params?.getString("nome")
         Toast.makeText(this, "nome do usuario: $nome", Toast.LENGTH_LONG).show()
         //viewT.text = "$nome"
-        // teste git
-
-        var num = 1
+        supportActionBar?.title = "Musicas"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
 
     }

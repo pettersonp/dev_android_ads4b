@@ -1,19 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout_menu_lateral"
+    android:fitsSystemWindows="true"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".TelaInicialActivity"
-    android:background="#BB94C0">
+    android:background="#BB94C0"
+    >
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/naveg_menu_lateral"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/menu_lateral_cabecalho"
+        app:menu="@menu/menu_lateral"
+
+
+
+        />
 
     <LinearLayout
+
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="144dp"
-        tools:layout_editor_absoluteY="159dp">
+        tools:layout_editor_absoluteY="159dp"
 
+
+        >
+        <include layout="@layout/toolbar" />
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
@@ -74,4 +94,4 @@
 
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

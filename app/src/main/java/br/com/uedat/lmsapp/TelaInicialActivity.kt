@@ -139,7 +139,7 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
     }
     public fun enviaNotificacao(intent: Intent){
         intent.putExtra("Tela inicial", "Notificação")
-        NotificatinUtil.create(this, 1, intent, "LMSApp", "Você tem uma nova atividade !")
+        NotificatinUtil.create(this, 1, intent, "Mob Music", "Você tem uma nova recomendação !")
     }
 
 

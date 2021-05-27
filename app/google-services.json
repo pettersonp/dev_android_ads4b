@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "33545873973",
+    "project_id": "ac5-devmobile",
+    "storage_bucket": "ac5-devmobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33545873973:android:7dc5fdffa56eb5d6321f7c",
+        "android_client_info": {
+          "package_name": "br.com.uedat.lmsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33545873973-a16jasfc3b796ee0ua8agk67bmdmq3k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG-3osLyIP2N2Rn0X9MiQYEWxxYku8ZHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33545873973-a16jasfc3b796ee0ua8agk67bmdmq3k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:33545873973:android:6d3d786bd7b547e0321f7c",
+        "android_client_info": {
+          "package_name": "com.uedat.lmsapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "33545873973-a16jasfc3b796ee0ua8agk67bmdmq3k4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG-3osLyIP2N2Rn0X9MiQYEWxxYku8ZHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "33545873973-a16jasfc3b796ee0ua8agk67bmdmq3k4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

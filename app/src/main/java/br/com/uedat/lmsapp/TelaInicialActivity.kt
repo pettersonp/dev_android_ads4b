@@ -1,6 +1,11 @@
 package br.com.uedat.lmsapp
 
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
@@ -10,8 +15,10 @@ import android.view.ViewAnimationUtils
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.core.app.NotificationCompat
 import androidx.core.view.isVisible
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.*
 import kotlinx.android.synthetic.main.activity_tela_inicial.*
 import kotlinx.android.synthetic.main.login.*
@@ -67,6 +74,10 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
             var name = "Ajuda"
             intent.putExtra("name","$name")
             startActivity(intent)
+        }
+        btnGerarNotificacao.setOnClickListener {
+            val intent = Intent(this, TelaInicialActivity::class.java)
+            enviaNotificacao(intent)
         }
 
 
@@ -126,4 +137,11 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
 
         return super.onOptionsItemSelected(item)
     }
+    public fun enviaNotificacao(intent: Intent){
+        intent.putExtra("Tela inicial", "Notificação")
+        NotificatinUtil.create(this, 1, intent, "LMSApp", "Você tem uma nova atividade !")
+    }
+
+
+
 }

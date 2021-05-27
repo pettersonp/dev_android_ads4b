@@ -92,6 +92,15 @@
             tools:layout_editor_absoluteX="181dp"
             tools:layout_editor_absoluteY="341dp" />
 
+        <Button
+            android:id="@+id/btnGerarNotificacao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teste_color"
+            android:text="Gerar notificação"
+            android:textStyle="bold"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="145dp" />
 
 
 

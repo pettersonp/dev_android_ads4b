@@ -14,26 +14,10 @@ class SegundaActivity : AppCompatActivity() {
         var nome = params?.getString("name")
         getSupportActionBar()?.setTitle("$nome")
 
-        recycler_disciplinas?.layoutManager = LinearLayoutManager(this)
+
 
 
     }
-    private var disciplinas = listOf<Disciplina>()
-    override fun onResume(){
-        super.onResume()
-        Thread{
-            disciplinas = DisciplinaService.getDisciplinas()
 
-            runOnUiThread{
-                recycler_disciplinas?.adapter = DisciplinaAdapter(disciplinas) {
-                    onClickDisciplina(it)
-                }
-            }
-        }.start()
-    }
-
-    fun onClickDisciplina(disciplina: Disciplina){
-        Toast.makeText(this, "Clicou Disciplina $(disciplina.nome)", Toast.LENGTH_LONG).show()
-    }
 
 }

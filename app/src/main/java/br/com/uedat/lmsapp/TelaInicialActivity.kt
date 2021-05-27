@@ -38,7 +38,7 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
         var nome = params?.getString("nome")
         Toast.makeText(this, "nome do usuario: $nome", Toast.LENGTH_LONG).show()
         setSupportActionBar(toolbar)
-
+        ConfigMenuLateral()
 
 
         supportActionBar?.title = "Musicas"
@@ -55,7 +55,6 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
             var name = "Playlists"
             intent.putExtra("name","$name")
             startActivity(intent)
-            ConfigMenuLateral()
         }
 
 
@@ -126,11 +125,16 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
 
         }else if (id == R.id.action_sair){
             Toast.makeText(this, "clicou em Sair", Toast.LENGTH_LONG).show()
-            finish()
+            finishApp()
 
 
+        } else if (id == R.id.localizacao_naveg) {
+            finishApp()
         }else if(id == android.R.id.home){
-            finish()
+            val intent = Intent(this, TelaInicialActivity::class.java)
+            var name = "Home"
+            intent.putExtra("name","$name")
+            startActivity(intent)
         }
 
 
@@ -140,6 +144,9 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
     public fun enviaNotificacao(intent: Intent){
         intent.putExtra("Tela inicial", "Notificação")
         NotificatinUtil.create(this, 1, intent, "Mob Music", "Você tem uma nova recomendação !")
+    }
+    public fun finishApp() {
+        finish()
     }
 
 

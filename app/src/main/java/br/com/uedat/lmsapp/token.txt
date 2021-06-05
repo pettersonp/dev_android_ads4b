@@ -1,1 +1,13 @@
 AAAAB899ajU:APA91bG9rUSHjWbaDUby_DrLO2CXEm9rmjYXjc3PPdm8jMC5hQVLlOrLEfkl0dzCq4WJDtFsbrGXW0zzMQw9CliIJsAtF_5x9Forstbl75DJ6JYA6GUn3tmPsp4WTBykfTLWICzjtaP7
+
+var usu = "aluno"
+            var sen = "impacta"
+            intent.putExtra("nome","$nome_usuario")
+            if (nome_usuario == usu && campo_senha == sen) {
+
+                startActivity(intent)
+
+            }else{
+                Toast.makeText(this,"Usuario errado.", Toast.LENGTH_SHORT).show()
+                tVIEW.text = "usuario errado $nome_usuario"
+            }
